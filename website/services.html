@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Services | Layer48 Technology Solutions Corp.</title>
-  <meta name="description" content="Detailed overview of Layer48 services: cyber defense, red team, purple team, EDR, web application and wireless testing, ISO 27001, NIST CSF, NIST 800-171/CMMC, PCI DSS, SAP S/4HANA GRC, Azure, AWS and GCP security, IAM, SSO federation and workload identity federation.">
+  <meta name="description" content="Detailed overview of Layer48 services: cyber defense, red team, purple team, EDR, web application and wireless testing, ISO 27001, NIST CSF, NIST 800-171/CMMC, PCI DSS, SAP S/4HANA GRC, Azure, AWS and GCP security, IAM, SSO federation, workload identity federation, agentic AI security, prompt security, shadow AI, AI governance and AI Act compliance.">
   <link rel="icon" href="assets/logo.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -34,8 +34,8 @@
   <section class="hero page-hero">
     <div class="container">
       <span class="eyebrow">Services</span>
-      <h1>Nineteen services. <em>One</em> security posture.</h1>
-      <p class="lead">Detailed scope, deliverables, and outcomes for every Layer48 service, organized across five practices: offensive and defensive security, security testing, governance and compliance, cloud, and identity.</p>
+      <h1>Twenty-four services. <em>One</em> security posture.</h1>
+      <p class="lead">Detailed scope, deliverables, and outcomes for every Layer48 service, organized across six practices: offensive and defensive security, security testing, governance and compliance, cloud, identity, and AI security and governance.</p>
     </div>
   </section>
 
@@ -76,6 +76,14 @@
           <li><a href="#iam">Identity &amp; Access Management</a></li>
           <li><a href="#sso">SSO Federation</a></li>
           <li><a href="#wif">Workload Identity Federation</a></li>
+        </ul>
+        <h4>AI Security &amp; Governance</h4>
+        <ul>
+          <li><a href="#agentic-ai">Agentic AI Security</a></li>
+          <li><a href="#prompt-security">Prompt Security</a></li>
+          <li><a href="#shadow-ai">Shadow AI</a></li>
+          <li><a href="#ai-governance">AI Governance</a></li>
+          <li><a href="#ai-acts">AI Acts &amp; Regulations</a></li>
         </ul>
       </nav>
 
@@ -799,6 +807,194 @@
           </article>
         </div>
 
+        <!-- ============ AI SECURITY & GOVERNANCE ============ -->
+        <div class="practice-block">
+          <header>
+            <span class="eyebrow">Practice 06</span>
+            <h2>AI Security &amp; Governance</h2>
+            <p>AI is being adopted faster than it is being secured or governed. We help you use it confidently: protecting models, agents, and data from new classes of attack, bringing shadow AI into the light, and meeting fast-moving regulatory obligations with a governance program built on recognized frameworks.</p>
+          </header>
+
+          <article class="service" id="agentic-ai">
+            <h3>Agentic AI Security</h3>
+            <p class="summary">Secure AI agents that reason, plan, and act on your behalf, calling tools, APIs, and other agents, before their autonomy becomes an attacker's leverage.</p>
+            <p class="detail">Agentic systems change the threat model. An agent that can read email, query databases, run code, or trigger payments turns a single manipulated input into real-world action. Typical failures include excessive agency, over-privileged tool credentials, poisoned memory, unsafe tool and Model Context Protocol (MCP) server integrations, and multi-agent trust chains nobody designed. We threat-model your agent architectures, design least-privilege identity and authorization for every tool an agent can call, place human approval where impact is high, and red team the result to prove an agent can't be talked into misusing its access.</p>
+            <div class="service-cols">
+              <div>
+                <h4>What's included</h4>
+                <ul>
+                  <li>Agent architecture review and threat modeling (OWASP Top 10 for Agentic Applications, MITRE ATLAS)</li>
+                  <li>Inventory of agents, tools, MCP servers, plug-ins, and the data each can reach</li>
+                  <li>Agent identity design: per-agent credentials, short-lived tokens, workload identity federation</li>
+                  <li>Least-privilege tool scoping, allow-lists, and authorization checks outside the model</li>
+                  <li>Human-in-the-loop approval for high-impact actions</li>
+                  <li>MCP server and third-party tool supply chain vetting</li>
+                  <li>Memory and context poisoning defenses; multi-agent trust boundaries</li>
+                  <li>Sandboxing for code execution and browser-using agents</li>
+                  <li>Agent observability: action logging, tracing, anomaly detection, and kill switches</li>
+                  <li>Adversarial testing of agents against goal hijacking and tool misuse</li>
+                </ul>
+              </div>
+              <div>
+                <h4>Deliverables</h4>
+                <ul>
+                  <li>Agent threat model and attack-path diagrams</li>
+                  <li>Agent and tool permission inventory with risk ratings</li>
+                  <li>Secure agent reference architecture and design standards</li>
+                  <li>Guardrail and approval-gate configuration</li>
+                  <li>Red team findings with reproduction steps and fixes</li>
+                  <li>Monitoring and incident response playbook for agent misuse</li>
+                </ul>
+              </div>
+            </div>
+            <div class="outcome"><strong>Outcome:</strong> Agents that do what they were built to do and nothing more, with every action attributable, bounded, and reversible.</div>
+            <div class="tags"><span>OWASP Agentic Top 10</span><span>MCP security</span><span>MITRE ATLAS</span><span>Excessive agency</span><span>Agent identity</span></div>
+          </article>
+
+          <article class="service" id="prompt-security">
+            <h3>Prompt Security &amp; LLM Red Teaming</h3>
+            <p class="summary">Test and harden your LLM applications against prompt injection, jailbreaks, data leakage, and the rest of the OWASP Top 10 for LLM Applications.</p>
+            <p class="detail">Large language models cannot reliably tell instructions from data. Anything they read (a user message, a web page, a PDF, a retrieved document, an email) can carry instructions an attacker planted. We test chatbots, copilots, and retrieval-augmented generation (RAG) systems the way an adversary would, with both direct and indirect prompt injection, jailbreak techniques, and attempts to extract system prompts, training data, or other users' information. We then design layered defenses, because no single guardrail is enough, and set up automated evaluation so protection keeps pace as models and prompts change.</p>
+            <div class="service-cols">
+              <div>
+                <h4>What's included</h4>
+                <ul>
+                  <li>Manual LLM red teaming aligned to the OWASP Top 10 for LLM Applications</li>
+                  <li>Direct and indirect prompt injection via documents, web content, email, and tool outputs</li>
+                  <li>Jailbreak and safety-bypass testing</li>
+                  <li>System prompt leakage and sensitive information disclosure testing</li>
+                  <li>RAG security: data poisoning, retrieval access control, and tenant isolation</li>
+                  <li>Insecure output handling (XSS, SQL, and command injection through model output)</li>
+                  <li>Guardrail and AI firewall design, selection, and tuning</li>
+                  <li>Prompt and context engineering for defense in depth</li>
+                  <li>Automated adversarial evaluation in CI/CD for prompts and model upgrades</li>
+                </ul>
+              </div>
+              <div>
+                <h4>Deliverables</h4>
+                <ul>
+                  <li>LLM security assessment report with risk-rated findings</li>
+                  <li>Successful attack prompts and transcripts as evidence</li>
+                  <li>OWASP LLM Top 10 coverage matrix</li>
+                  <li>Layered defense architecture and guardrail configuration</li>
+                  <li>Reusable adversarial test suite for regression testing</li>
+                  <li>Retest confirming remediation</li>
+                </ul>
+              </div>
+            </div>
+            <div class="outcome"><strong>Outcome:</strong> LLM applications that resist manipulation, keep sensitive data where it belongs, and stay tested as they evolve.</div>
+            <div class="tags"><span>OWASP LLM Top 10</span><span>Prompt injection</span><span>Jailbreaks</span><span>RAG security</span><span>Guardrails</span></div>
+          </article>
+
+          <article class="service" id="shadow-ai">
+            <h3>Shadow AI Discovery &amp; Control</h3>
+            <p class="summary">Find the AI tools, browser extensions, and integrations your people already use, understand what data is flowing into them, and replace blanket bans with safe, sanctioned alternatives.</p>
+            <p class="detail">Employees adopt generative AI because it makes them faster, often by pasting source code, customer records, or contracts into tools the organization has never reviewed. Shadow AI also hides in SaaS features that switched on AI by default, in OAuth grants to AI apps, and in models deployed in cloud accounts outside security's view. We discover it across network, endpoint, identity, SaaS, and cloud telemetry, assess the risk of each tool and use case, and put proportionate controls in place: an acceptable use policy people understand, data loss prevention for prompts and uploads, and approved tools that remove the reason to go around security.</p>
+            <div class="service-cols">
+              <div>
+                <h4>What's included</h4>
+                <ul>
+                  <li>Discovery of AI usage via SSE/CASB, secure web gateway, DNS, and firewall logs</li>
+                  <li>OAuth and SaaS-to-AI integration review in Entra ID, Okta, and Google Workspace</li>
+                  <li>Browser extension and desktop AI app inventory via EDR and endpoint management</li>
+                  <li>Embedded AI features in existing SaaS platforms and their data-use terms</li>
+                  <li>AI security posture management for models and AI services in Azure, AWS, and GCP</li>
+                  <li>Vendor and tool risk assessment: data retention, training use, residency, security</li>
+                  <li>Generative AI acceptable use policy and data classification rules</li>
+                  <li>DLP controls for prompts, file uploads, and copy/paste into AI tools</li>
+                  <li>Sanctioned AI tool selection and secure enterprise configuration</li>
+                  <li>AI literacy and awareness training for staff</li>
+                </ul>
+              </div>
+              <div>
+                <h4>Deliverables</h4>
+                <ul>
+                  <li>Shadow AI inventory: tools, users, departments, and data types involved</li>
+                  <li>Risk-ranked tool register with sanction / restrict / block decisions</li>
+                  <li>Generative AI acceptable use policy</li>
+                  <li>Configured DLP and access policies</li>
+                  <li>Continuous discovery and reporting process</li>
+                </ul>
+              </div>
+            </div>
+            <div class="outcome"><strong>Outcome:</strong> Full visibility of AI use across the business, sensitive data kept out of unapproved tools, and employees with safe ways to keep moving fast.</div>
+            <div class="tags"><span>Shadow AI</span><span>SSE / CASB</span><span>DLP</span><span>AI-SPM</span><span>Acceptable use</span></div>
+          </article>
+
+          <article class="service" id="ai-governance">
+            <h3>AI Governance</h3>
+            <p class="summary">Establish accountable, risk-based oversight of how your organization builds, buys, and uses AI, built on ISO/IEC 42001, the NIST AI Risk Management Framework, and the OECD AI Principles.</p>
+            <p class="detail">AI governance answers the questions boards, customers, and regulators are now asking: what AI do we use, who owns it, what could go wrong, and how do we know it is working as intended? We stand up a governance structure with clear decision rights, build an inventory of AI systems and use cases, and tier them by risk so that oversight is proportionate rather than a bottleneck. Each system gets impact assessments, controls across its lifecycle (data, development, validation, deployment, monitoring, and retirement), and documentation that holds up to scrutiny. For organizations seeking external assurance, we prepare you for certification of an AI Management System (AIMS) against ISO/IEC 42001.</p>
+            <div class="service-cols">
+              <div>
+                <h4>What's included</h4>
+                <ul>
+                  <li>AI governance maturity assessment and roadmap</li>
+                  <li>AI governance committee, charter, roles, and decision rights</li>
+                  <li>AI policy, responsible AI principles, and lifecycle standards</li>
+                  <li>AI system and use-case inventory with ownership</li>
+                  <li>Risk tiering and AI impact assessments (ISO/IEC 42005, NIST AI RMF Map/Measure)</li>
+                  <li>Controls for data quality, bias and fairness, transparency, explainability, and human oversight</li>
+                  <li>Model validation, performance monitoring, and drift management</li>
+                  <li>Third-party and vendor AI risk management</li>
+                  <li>ISO/IEC 42001 AIMS implementation, internal audit, and certification readiness</li>
+                  <li>Alignment with existing ISO 27001, privacy, and enterprise risk programs</li>
+                </ul>
+              </div>
+              <div>
+                <h4>Deliverables</h4>
+                <ul>
+                  <li>AI governance framework and committee charter</li>
+                  <li>AI policy and supporting standards</li>
+                  <li>AI system register with risk tiers and owners</li>
+                  <li>Impact assessment templates and completed assessments</li>
+                  <li>Framework crosswalk (ISO 42001, NIST AI RMF, OECD, EU AI Act)</li>
+                  <li>Board and executive AI risk reporting</li>
+                </ul>
+              </div>
+            </div>
+            <div class="outcome"><strong>Outcome:</strong> AI adoption that leadership can stand behind, with clear accountability, proportionate controls, and evidence ready for customers, auditors, and regulators.</div>
+            <div class="tags"><span>ISO/IEC 42001</span><span>NIST AI RMF</span><span>NIST AI 600-1</span><span>OECD AI Principles</span><span>ISO/IEC 23894</span><span>ISO/IEC 42005</span></div>
+          </article>
+
+          <article class="service" id="ai-acts">
+            <h3>Compliance with AI Acts &amp; Regulations</h3>
+            <p class="summary">Understand which AI laws apply to you, classify your AI systems, and meet your obligations as a provider or deployer under the EU AI Act and emerging U.S. and international regulations.</p>
+            <p class="detail">The EU Artificial Intelligence Act is the first comprehensive AI law, with obligations phasing in over several years and reaching any organization that places AI on the EU market or whose AI output is used in the EU. It sorts AI into prohibited practices, high-risk systems, systems with transparency obligations, and general-purpose AI models, with different duties for providers and deployers. Elsewhere, U.S. states and cities are regulating automated decision-making in hiring, lending, insurance, and other consequential decisions. We map your AI portfolio to the laws that apply, determine your role and risk classification for each system, and build the documentation, assessments, and processes required, reusing your AI governance program so you comply once across many regimes.</p>
+            <div class="service-cols">
+              <div>
+                <h4>What's included</h4>
+                <ul>
+                  <li>Regulatory applicability analysis across jurisdictions and business lines</li>
+                  <li>EU AI Act role determination (provider, deployer, importer, distributor)</li>
+                  <li>Risk classification of each AI system, including prohibited-practice screening</li>
+                  <li>High-risk system requirements: risk management, data governance, technical documentation, logging, human oversight, accuracy, robustness, and cybersecurity</li>
+                  <li>Conformity assessment preparation and quality management system alignment</li>
+                  <li>Fundamental rights impact assessments for deployers</li>
+                  <li>Transparency obligations: AI interaction notices and labeling of AI-generated content</li>
+                  <li>General-purpose AI model obligations and downstream provider requirements</li>
+                  <li>AI literacy programs for staff</li>
+                  <li>U.S. requirements, such as the Colorado AI Act and NYC Local Law 144 bias audits</li>
+                  <li>Post-market monitoring and serious incident reporting processes</li>
+                </ul>
+              </div>
+              <div>
+                <h4>Deliverables</h4>
+                <ul>
+                  <li>AI regulatory applicability map</li>
+                  <li>AI system classification register with rationale</li>
+                  <li>Gap assessment against applicable obligations</li>
+                  <li>Technical documentation and assessment templates, completed for in-scope systems</li>
+                  <li>Compliance roadmap tracked against regulatory deadlines</li>
+                  <li>Monitoring and incident reporting procedures</li>
+                </ul>
+              </div>
+            </div>
+            <div class="outcome"><strong>Outcome:</strong> A clear picture of your AI regulatory exposure and a documented, defensible compliance position, ready before each deadline arrives.</div>
+            <div class="tags"><span>EU AI Act</span><span>Colorado AI Act</span><span>NYC Local Law 144</span><span>Conformity assessment</span><span>FRIA</span><span>GPAI</span></div>
+          </article>
+        </div>
+
         <div class="cta reveal" style="grid-template-columns:1fr;text-align:left;">
           <div>
             <span class="eyebrow">Next step</span>
@@ -849,6 +1045,7 @@
           <li><a href="#aws">AWS</a></li>
           <li><a href="#gcp">Google Cloud</a></li>
           <li><a href="#iam">Identity &amp; Access</a></li>
+          <li><a href="#ai-governance">AI Governance</a></li>
         </ul>
       </div>
     </div>
